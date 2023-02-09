@@ -29,13 +29,15 @@ int main()
     for (int j = 1; j < n; j++)
     {
         int key = array[j];
-        printf("\n\n");
+        printf("\n");
         printf("j = %d and Key = %d\n",j,key);
         int i=j-1;
         while(i>=0 && array[i]>key){
             array[i+1]=array[i];
             PrintArray(array,n);
-            i--;
+           
+            i--;  //when i is less than zero, the loop ends
+           
         }
         array[i+1]=key;
         PrintArray(array,n);
